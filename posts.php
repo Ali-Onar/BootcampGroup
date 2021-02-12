@@ -35,7 +35,6 @@ $_SESSION['data'] = $data;
         }
 
         foreach ($data as $index => $item) {
-            echo $item['image'];
         ?>
             <div class="col-md-12">
                 <div class="col-md-2">

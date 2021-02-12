@@ -32,8 +32,8 @@
                 <input type="text" name="kullanici_adi" required="" 
                 
                 <?php 
-                if (isset($_SESSION['kullaniciadi'])) { ?> 
-                value="<?php echo $_SESSION['kullaniciadi']; ?>" 
+                if (isset($_SESSION['kullanici_adi'])) { ?> 
+                value="<?php echo $_SESSION['kullanici_adi']; ?>" 
                 <?php 
                 } else { ?> placeholder="Kullanıcı Adınızı Giriniz">
             <?php } ?>
