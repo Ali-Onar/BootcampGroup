@@ -1,22 +1,24 @@
-<?php include('data.php');
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    }
+<?php 
+include ('data.php');
 
- ?>
+$_SESSION['data'] = $data;
+
+
+?>
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>...</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>...</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+
 <body>
-    
+
     <div class="col-md-offset-1 col-md-10 col-md-offset-1" style="margin-top: 25px;">
         <div style="display: flex;">
-            <h3 style="    width: 100%;">Yazılar</h3> 
+            <h3 style="    width: 100%;">Yazılar</h3>
             <div class="pull-right" style="    text-align: right;
                                                 display: flex;
                                                 width: 100%;
@@ -27,16 +29,17 @@
             </div>
         </div>
 
-        <?php 
-            if(isset($_SESSION['data'])){
-                $data = $_SESSION['data'];
-            }
+        <?php
+        if (isset($_SESSION['data'])) {
+            $data = $_SESSION['data'];
+        }
 
-            foreach ($data as $index=>$item) {
+        foreach ($data as $index => $item) {
+            echo $item['image'];
         ?>
             <div class="col-md-12">
                 <div class="col-md-2">
-                    <img src="<?php echo $item['image']; ?>" />
+                    <img src="<?php echo $item['image'];?>"/>
                 </div>
                 <div class="col-md-8">
                     <div style="margin-bottom: 15px;"><b><?php echo $item['title']; ?></b></div>
@@ -66,7 +69,8 @@
      * **Not:** Henüz veritabanı görmediğimiz için bu yazıları sabit (hardcoded)
      * verebilirsiniz. `data.php` dosyası üzerinden almanız bekleniyor.
      */
-    
+
     ?>
 </body>
+
 </html>

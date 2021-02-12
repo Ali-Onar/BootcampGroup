@@ -1,0 +1,101 @@
+form {
+    position: static;
+    width: 50%;
+    border: 2px dashed #074EE8;
+    background-color: #E0EAFF;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+}
+
+.header-left {
+    flex: 1;
+}
+
+
+/* Full-width inputs */
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#textFail {
+    border: 1px solid #BC31EA;
+    color: #BC31EA;
+}
+
+
+/* Set a style for all buttons */
+
+.buttonLogin {
+    background: #FFFFFF;
+    border: 2px solid #074EE8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.buttonDetail {
+    float: right;
+    background: #FFFFFF;
+    border: 2px solid #074EE8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+.buttonRead {
+    float: right;
+    background: #FFFFFF;
+    border: 2px solid #BC31EA;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 7px 15px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+
+/* Add padding to containers */
+
+.container {
+    padding: 16px;
+}
+
+.all {
+    position: static;
+    width: 70%;
+    margin: auto;
+}
+
+.content {
+    position: static;
+    width: 100%;
+    margin: auto;
+}
+
+.article {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.article-left {
+    float: left;
+    padding: 0 15px 0 0;
+}
+
+a {
+    text-decoration: none;
+}

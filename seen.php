@@ -1,20 +1,20 @@
-<?php include('data.php');
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    }
+<?php 
 
- ?>
+include ('data.php');
+
+?>
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>...</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>...</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+
 <body>
     <?php
-    
+
     /**
      * Bu dosya örnek amaçlı olarak oluşturulmuştur. Grupla beraber karar verip
      * dosya isimlerini değiştirebilir veya buradaki işlemleri farklı dosyalara
@@ -26,11 +26,11 @@
      * listelendiği sayfadır. `posts.php` sayfasında olduğu gibi yazı hakkında ufak
      * bilgi ve detay linki yer almalıdır.
      */
-    
+
     ?>
     <div class="col-md-offset-1 col-md-10 col-md-offset-1" style="margin-top: 25px;">
         <div style="display: flex;">
-            <h3 style="    width: 100%;">Okunan Yazılar</h3> 
+            <h3 style="    width: 100%;">Okunan Yazılar</h3>
             <div class="pull-right" style="    text-align: right;
                                                 display: flex;
                                                 width: 100%;
@@ -41,14 +41,14 @@
             </div>
         </div>
 
-        <?php 
-            if(isset($_SESSION['data'])){
-                $data = $_SESSION['data'];
-            }
+        <?php
+        if (isset($_SESSION['data'])) {
+            $data = $_SESSION['data'];
+        }
 
-            foreach ($data as $index=>$item) {
-                if($item['seen'] == false)
-                    continue;
+        foreach ($data as $index => $item) {
+            if ($item['seen'] == false)
+                continue;
         ?>
             <div class="col-md-12">
                 <div class="col-md-2">
@@ -68,4 +68,5 @@
         <?php } ?>
     </div>
 </body>
+
 </html>

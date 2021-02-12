@@ -13,10 +13,9 @@
   * Eğer bu sayfaya birden fazla yerden gelebiliyorsa **geldiği sayfaya** yönlenmesini
   * bekliyoruz.
   */
- if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    }
+  include ("functions.php");
+  processControl();
+
  if(isset($_GET['blog'])){
  	if(isset($_SESSION['data'])){
         $_SESSION['data'][(int)$_GET['blog']]['seen'] = false;
